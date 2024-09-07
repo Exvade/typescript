@@ -1,5 +1,5 @@
 let namaSaya: string = "Deft Valian Exanova";
-let usernaame: number = 123;;
+let usernaame: number = 123;
 let isDead: boolean = false;
 
 let pacarSaya: string | number;
@@ -14,22 +14,32 @@ istriSaya = ["Nabila", "Fitriyani"];
 let legendFavorit: [string, number, boolean];
 legendFavorit = ["Hattori", 30, true];
 
-
 //! TIPEDATA CUSTOM
 type TemanType = {
-    nama: string;
-    isKampret: boolean;
-    hutang?: number;
+  nama: string;
+  isKampret: boolean;
+  hutang?: number;
 };
 let temanKita: TemanType;
 temanKita = {
-    nama: "Rangga",
-    isKampret: true,
-    hutang: 45_000,  
+  nama: "Rangga",
+  isKampret: true,
+  hutang: 45_000,
 };
 
-console.log({ temanKita })
+//!Function
+function create(): void {
+  console.log("Hello World");
+}
+create();
 
+//? Arrow Function
+const create2 = (): string => "Hello world";
+//versi clean code, buat variabel yang menampung function
+const result = create2();
+console.log(result);
+
+console.log({ temanKita });
 console.log({ namaSaya });
 console.log({ usernaame });
 console.log({ isDead });
