@@ -19,14 +19,19 @@ temanKita = {
 };
 //!Function
 function create() {
-    return 2;
+    console.log("Hello World");
 }
+create();
 //? Arrow Function
 const create2 = () => "Hello world";
-console.log(create2());
 //versi clean code, buat variabel yang menampung function
 const result = create2();
 console.log(result);
+function add(x, y) {
+    const z = x + y;
+    console.log(`Hasil nya adalah ${z}`);
+}
+add(10, 9);
 console.log({ temanKita });
 console.log({ namaSaya });
 console.log({ usernaame });

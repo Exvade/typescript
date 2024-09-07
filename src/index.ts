@@ -39,6 +39,12 @@ const create2 = (): string => "Hello world";
 const result = create2();
 console.log(result);
 
+function add(x: number, y: number): void {
+  const z: number = x + y;
+  console.log(`Hasil nya adalah ${z}`);
+}
+add(10, 9);
+
 console.log({ temanKita });
 console.log({ namaSaya });
 console.log({ usernaame });
