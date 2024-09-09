@@ -18,10 +18,10 @@ temanKita = {
     hutang: 45000,
 };
 //!Function
-function create() {
-    console.log("Hello World");
-}
-create();
+// function create(): void {
+//   console.log("Hello World");
+// }
+// create();
 //? Arrow Function
 const create2 = () => "Hello world";
 //versi clean code, buat variabel yang menampung function
@@ -32,6 +32,26 @@ function add(x, y) {
     console.log(`Hasil nya adalah ${z}`);
 }
 add(10, 9);
+let sayaManusia;
+sayaManusia = "Deft Valian Exanova";
+function create(processor) {
+    console.log(`
+  terimakasih ${processor.brand}💗 
+  berhasil membuat processor dengan detail berikut:
+  nama base model: ${processor.baseModel}
+  nama model: ${processor.modelName}
+  kecepatan clock: ${processor.clockSpeed}
+  turbo boost: ${processor.isTurboBoost ? "ada" : "tidak ada"}
+  `);
+}
+const intelCoreI5 = {
+    brand: "Intel",
+    baseModel: "Core i5",
+    modelName: "11350F",
+    clockSpeed: 2.9,
+    isTurboBoost: false,
+};
+create(intelCoreI5);
 console.log({ temanKita });
 console.log({ namaSaya });
 console.log({ usernaame });

@@ -28,10 +28,10 @@ temanKita = {
 };
 
 //!Function
-function create(): void {
-  console.log("Hello World");
-}
-create();
+// function create(): void {
+//   console.log("Hello World");
+// }
+// create();
 
 //? Arrow Function
 const create2 = (): string => "Hello world";
@@ -54,6 +54,39 @@ type Gender = string | boolean;
 
 let sayaManusia: Gender;
 sayaManusia = "Deft Valian Exanova";
+
+//implementasi union
+interface IProcessor {
+  brand: string;
+  baseModel: string;
+  modelName: string;
+  clockSpeed: number;
+}
+
+interface IProcessor {
+  isTurboBoost: boolean;
+}
+
+function create(processor: IProcessor): void {
+  console.log(`
+  terimakasih ${processor.brand}💗 
+  berhasil membuat processor dengan detail berikut:
+  nama base model: ${processor.baseModel}
+  nama model: ${processor.modelName}
+  kecepatan clock: ${processor.clockSpeed}
+  turbo boost: ${processor.isTurboBoost ? "ada" : "tidak ada"}
+  `);
+}
+
+const intelCoreI5 = {
+  brand: "Intel",
+  baseModel: "Core i5",
+  modelName: "11350F",
+  clockSpeed: 2.9,
+  isTurboBoost: false,
+};
+
+create(intelCoreI5);
 
 console.log({ temanKita });
 console.log({ namaSaya });
