@@ -45,6 +45,16 @@ function add(x: number, y: number): void {
 }
 add(10, 9);
 
+//? Tipedata union
+type Wanita = string;
+type Pria = boolean;
+
+// type Gender = Wanita | Pria;
+type Gender = string | boolean;
+
+let sayaManusia: Gender;
+sayaManusia = "Deft Valian Exanova";
+
 console.log({ temanKita });
 console.log({ namaSaya });
 console.log({ usernaame });
