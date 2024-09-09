@@ -63,30 +63,53 @@ interface IProcessor {
   clockSpeed: number;
 }
 
-interface IProcessor {
+interface Intel extends IProcessor {
   isTurboBoost: boolean;
 }
 
-function create(processor: IProcessor): void {
+interface AMD extends IProcessor {
+  isPrecisionBoost: boolean;
+}
+
+function createIntel(processor: Intel): void {
   console.log(`
   terimakasih ${processor.brand}💗 
   berhasil membuat processor dengan detail berikut:
   nama base model: ${processor.baseModel}
   nama model: ${processor.modelName}
   kecepatan clock: ${processor.clockSpeed}
-  turbo boost: ${processor.isTurboBoost ? "ada" : "tidak ada"}
+  turbo boost: ${processor.isTurboBoost}
   `);
 }
 
-const intelCoreI5 = {
+function createAMD(processor: AMD): void {
+  console.log(`
+  terimakasih ${processor.brand}💗 
+  berhasil membuat processor dengan detail berikut:
+  nama base model: ${processor.baseModel}
+  nama model: ${processor.modelName}
+  kecepatan clock: ${processor.clockSpeed}
+  precision booost: ${processor.isPrecisionBoost}
+  `);
+}
+
+const coreI5: Intel = {
   brand: "Intel",
   baseModel: "Core i5",
   modelName: "11350F",
   clockSpeed: 2.9,
-  isTurboBoost: false,
+  isTurboBoost: true,
+};
+const ryzen3: AMD = {
+  brand: "Ryzen",
+  baseModel: "Ryzen 3",
+  modelName: "R-5570X",
+  clockSpeed: 6,
+  isPrecisionBoost: true,
 };
 
-create(intelCoreI5);
+createIntel(coreI5);
+createAMD(ryzen3);
 
 console.log({ temanKita });
 console.log({ namaSaya });
